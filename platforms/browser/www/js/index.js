@@ -61,6 +61,7 @@ function startScan() {
             "Format: " + result.format + "<br/>" +
             "Cancelled: " + result.cancelled;
             resultDiv.innerHTML = s;
+            window.open('https://www.google.co.th/#q='+result.text, '_system')
         },
         function (error) {
             alert("Scanning failed: " + error);

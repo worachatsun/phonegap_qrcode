@@ -7,13 +7,26 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
+        <style>
+        .center {
+            position: relative;
+            float: left;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2em;
+          }
+          body{
+            background: #000;
+            color: #FFF;
+          }
+        </style>
     </head>
-    <body>
-        <p style="margin-top: 100">
-            <button id="startScan">Start Scan</button>
-        </p>
-        <div id="results"></div>
-        <a href="www.google.com">google</a>
+    <body id="startScan">
+        <p class="center">Byenior Scan</p>
+        <p class="center">Press screen to scan</p>
+        <div class="center" id="results"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
