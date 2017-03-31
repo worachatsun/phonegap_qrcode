@@ -73,7 +73,7 @@ function startScan() {
             //       console.log('error');
             //   }
             // });
-            $.ajax({url: "bynior19:8888/bynior/"+result.text, success: function(result){
+            $.ajax({url: "http://boszer.me/5fe57832fa2da80dc3543a3e893e589d/"+result.text, success: function(result){
                 console.log(result)
             }});
         },

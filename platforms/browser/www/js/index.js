@@ -61,7 +61,21 @@ function startScan() {
             "Format: " + result.format + "<br/>" +
             "Cancelled: " + result.cancelled;
             resultDiv.innerHTML = s;
-            window.open('https://www.google.co.th/#q='+result.text, '_system')
+            // window.open('https://www.google.co.th/#q='+result.text, '_system')
+            // $.ajax({
+            //   type: "GET",
+            //   dataType: "json",
+            //   url: "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data="+result.text,
+            //   success: function() {
+            //       navigator.notification.alert("Success!");
+            //   },
+            //   error: function(jqXHR, textStatus, errorThrown) {
+            //       console.log('error');
+            //   }
+            // });
+            $.ajax({url: "http://boszer.me/5fe57832fa2da80dc3543a3e893e589d/"+result.text, success: function(result){
+                console.log(result)
+            }});
         },
         function (error) {
             alert("Scanning failed: " + error);
